@@ -1,0 +1,46 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    color: black;
+}
+#gallery{
+	width: 926px;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 550px;
+	box-sizing: border-box;
+}
+#gallery input[name="radioInput"]{
+	display: none;
+}
+#gallery label{
+	opacity: .6;
+	cursor: pointer;
+}
+#gallery>img{
+	position: absolute;
+	top:0;
+	left: 0;
+	display: block;
+	width: 924px;
+}
+
+#gallery input[name="radioInput"]:checked + label{
+	opacity: 1; 
+}
+
+#gallery input[name="radioInput"]:checked ~ img{
+	opacity: 0;
+	transition:.5s;
+	transform:scale(1.1);
+}
+
+#gallery input[name="radioInput"]:checked + label + img{
+ 	opacity: 1;
+ 	transition:.5s;
+ 	transform:scale(1); 
+ }
